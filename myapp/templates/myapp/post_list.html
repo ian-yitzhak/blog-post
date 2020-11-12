@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% extends 'myapp/base.html' %}
 
 {% load static %}
 <html>
@@ -11,6 +12,7 @@
 	<title>hey there</title>
 </head>
 <body>
+	{% block content %}
 
 	<h1>hello</h1>
 	{% for post in posts %}
@@ -20,6 +22,8 @@
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
 {% endfor %}
+
+{% endblock %}
 
 </body>
 </html>
